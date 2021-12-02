@@ -18,6 +18,10 @@ function spinToWin(n) {
 
 var numbersArray = [];
 
+function pushNumber(n) {
+    numbersArray.push(n);
+}
+
 function arrRandomizer(array) {
     var newArr = [];
     while(array.length) {
@@ -26,5 +30,5 @@ function arrRandomizer(array) {
         var splicedNum = splicedArr[0];
         newArr.push(splicedNum);
     }
-    return newArr;
+    document.querySelector("div.output").innerHTML = newArr;
 }
