@@ -1,0 +1,64 @@
+.body {
+    background-color: #8db692;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+  }
+  .external {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .internal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+  }
+  .btn {
+    height: 25vh;
+    width: 75%;
+  }
+  #number {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 24px;
+  }
+  .output {
+    font-size: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    width: 65%;
+    color: rgb(255, 255, 255);
+    border: 5px dotted rgb(255, 255, 255);
+  }
+  .title {
+    font-family: "Permanent Marker", cursive;
+    color: rgb(55, 165, 82);
+    position: absolute;
+    top: 2%;
+    font-size: 32px;
+  
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: rgb(174, 248, 198);
+    --stroke-color: lightgreen;
+  
+    text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+      calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
+        0px var(--stroke-color);
+  }
+  
+  .content {
+    margin-top: 22%;
+  }
+  
