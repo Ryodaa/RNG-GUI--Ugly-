@@ -23,7 +23,33 @@
   </head>
   <body class="body">
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(52, 155, 98, 0.747);">
+    <div class="external">
+        <div class="middle">
+          <div class="text-center internal">
+            <div class="content">
+              <div class="title">Super Mega Ultra Awesome Random Number Generator!!!</div>
+              <div class="output">
+                <div style="visibility: hidden;">69420</div>
+              </div>
+              <button
+                onclick="spinToWin(document.querySelector('input').value)"
+                type="button"
+                class=" btn-custom btn btn-lg btn-success"
+              >
+                Spin to Win!
+              </button>
+              <input
+                type="text"
+                class="form-control"
+                id="number"
+                placeholder="Maximum Number"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(52, 155, 98, 0.747);">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Randomizer</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
