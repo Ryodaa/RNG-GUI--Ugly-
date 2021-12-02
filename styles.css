@@ -44,7 +44,7 @@
     font-family: "Permanent Marker", cursive;
     color: rgb(55, 165, 82);
     font-size: 30px;
-    margin: 0 2% 10% 2%;
+    margin: 0 2% 5% 2%;
   
     --x-offset: -0.0625em;
     --y-offset: 0.0625em;
@@ -55,4 +55,14 @@
     text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
       calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
         0px var(--stroke-color);
+  }
+
+  .checkboxBottom {
+      margin-top: 5%;
+      font-size: 14px;
+      color: #ffffff;
+  }
+
+  .content {
+      margin-top: 10%;
   }

@@ -9,4 +9,16 @@ function spinToWin(n) {
       return result;
     }
   }
-  
+
+var numbersArray = [];
+
+function arrRandomizer(array) {
+    var newArr = [];
+    while(array.length) {
+        var random = Math.floor(Math.random() * array.length);
+        var splicedArr = array.splice(random, 1);
+        var splicedNum = splicedArr[0];
+        newArr.push(splicedNum);
+    }
+    return newArr;
+}
