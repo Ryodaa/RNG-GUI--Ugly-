@@ -1,12 +1,18 @@
 function spinToWin(n) {
     if (n <= -1 || n >= 10000000) {
-      var result = "Error";
-      document.querySelector("div.output").innerHTML = result;
-      return result;
+      var num = "Error";
+      document.querySelector("div.output").innerHTML = num;
+      return num;
     } else {
-      var result = Math.floor(Math.random() * n);
-      document.querySelector("div.output").innerHTML = result;
-      return result;
+        if(document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == true) {
+            var num = Math.floor(Math.random() * (n - 0 + 1)) + 0;
+            document.querySelector("div.output").innerHTML = num;
+            return num;
+        } else if (document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == false) {
+            var num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
+            document.querySelector("div.output").innerHTML = num;
+            return num;
+        }
     }
   }
 
