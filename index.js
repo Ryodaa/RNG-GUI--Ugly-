@@ -5,7 +5,7 @@ function spinToWin(n) {
       return num;
     } else {
         if(document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == true) {
-            var num = Math.floor(Math.random() * (n - 0 + 1)) + 0;
+            var num = Math.floor(Math.random() * (n - 0 + 1));
             document.querySelector("div.output").innerHTML = num;
             return num;
         } else if (document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == false) {
