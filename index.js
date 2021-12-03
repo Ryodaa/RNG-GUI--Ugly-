@@ -5,11 +5,9 @@ function spinToWin(n) {
         if(document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == true) {
             var num = Math.floor(Math.random() * (n - 0 + 1));
             document.querySelector("div.output").innerHTML = num;
-            return num;
         } else if (document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == false) {
             var num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
             document.querySelector("div.output").innerHTML = num;
-            return num;
         }
     }
   }
@@ -32,7 +30,7 @@ function push(n, min, max) {
     }
 }
 
-// The Old functions
+// Old functions
 
 // function pushRange(min, max) {
 //     for (let i = min; i < max; i++) {
