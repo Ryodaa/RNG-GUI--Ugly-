@@ -22,13 +22,13 @@
   }
   .btn-custom {
     height: 18vh;
-    width: 80%;
+    width: 70%;
   }
   #number {
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    margin-top: 24px;
+    width: 48%;
+    margin-bottom: 3%;
   }
   #numberShuf {
     margin-left: auto;
@@ -41,30 +41,19 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 24px;
+    margin: 24px;
     width: 75%;
     color: rgb(255, 255, 255);
     border: 5px dotted rgb(255, 255, 255);
   }
   .title {
-    font-family: "Permanent Marker", cursive;
-    color: rgb(55, 165, 82);
+    color: white;
     font-size: 30px;
     margin: 0 2% 10% 2%;
-  
-    --x-offset: -0.0625em;
-    --y-offset: 0.0625em;
-    --stroke: 0.025em;
-    --background-color: rgb(174, 248, 198);
-    --stroke-color: lightgreen;
-  
-    text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
-      calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
-        0px var(--stroke-color);
   }
 
   .checkboxBottom {
-      margin-top: 5%;
+      margin-top: 2%;
       font-size: 14px;
       color: #ffffff;
   }
