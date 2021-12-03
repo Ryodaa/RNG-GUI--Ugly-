@@ -27,10 +27,16 @@
   #number {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 55%;
     margin-top: 24px;
   }
+  #numberShuf {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+  }
   .output {
+    display: inline-table;
     font-size: 50px;
     text-align: center;
     margin-left: auto;
@@ -72,4 +78,20 @@
     width: 30vw;
     display: inline-table;
     text-align: center;
+    color: white;
+    font-size: small;
+  }
+
+  .shuffleButtons {
+    margin: 7% 0 12% 0;
+  }
+
+  .shfl-btn {
+    width: 130px;
+    margin-top: 10px;
+  }
+  .or {
+    padding: 1% 0 2% 0;
+    color: white;
+    font-size: small;
   }
