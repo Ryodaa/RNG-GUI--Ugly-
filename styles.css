@@ -66,3 +66,10 @@
   .content {
       margin-top: 0%;
   }
+
+  .rangeNum {
+    padding-top: 10px;
+    width: 30vw;
+    display: inline-table;
+    text-align: center;
+  }

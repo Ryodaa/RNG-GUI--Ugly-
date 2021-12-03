@@ -28,15 +28,31 @@
           <div class="text-center internal">
             <div class="content">
                 <h1>This part is unfinished</h1>
+                <div class="rangeNum">
+                  <input
+                  type="text"
+                  class="form-control"
+                  id="min-number"
+                  placeholder="min"
+                />
+                <input
+                type="text"
+                class="form-control"
+                id="max-number"
+                placeholder="max"
+              />
+                </div>
                 <input
                 type="text"
                 class="form-control"
                 id="number"
                 placeholder="Numbers"
               />
-              <button onclick="pushNumber(document.querySelector('input').value)" class="btn btn-lg btn-success">Push</button>
+              <button onclick="push(document.querySelector('input#number').value, document.querySelector('input#min-number').value, document.querySelector('input#max-number').value)" class="btn btn-lg btn-success">Push</button>
               <button onclick="arrRandomizer(numbersArray)" class="btn btn-lg btn-success">OK</button>
               <div class="output">Result</div>
+              <div class="previewInputCurrent">Placeholder</div>
+              <div class="previewInputFull">Placeholder</div>
             </div>
           </div>
         </div>
