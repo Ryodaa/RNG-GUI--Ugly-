@@ -21,13 +21,13 @@
     width: 100vw;
   }
   .btn-custom {
-    height: 18vh;
-    width: 70%;
+    height: 65px;
+    width: 230px;
   }
   #number {
     margin-left: auto;
     margin-right: auto;
-    width: 48%;
+    width: 230px;
     margin-bottom: 3%;
   }
   #numberShuf {
@@ -51,17 +51,14 @@
     font-size: 30px;
     margin: 0 2% 10% 2%;
   }
-
   .checkboxBottom {
       margin-top: 2%;
       font-size: 14px;
       color: #ffffff;
   }
-
   .content {
       margin-top: 0%;
   }
-
   .rangeNum {
     padding-top: 10px;
     width: 30vw;
@@ -70,11 +67,9 @@
     color: white;
     font-size: small;
   }
-
   .shuffleButtons {
     margin: 7% 0 12% 0;
   }
-
   .shfl-btn {
     width: 130px;
     margin-top: 10px;
