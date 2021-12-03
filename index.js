@@ -18,12 +18,12 @@ function push(n, min, max) {
     if (document.querySelector('input#number').value != '' && document.querySelector('input#min-number').value == '' && document.querySelector('input#max-number').value == '') {
         numbersArray.push(n);
         document.querySelector("input#number").value = '';
+        document.querySelector("div.output").innerHTML = numbersArray;
         document.querySelector("div.previewInputCurrent").innerHTML = numbersArray[numbersArray.length - 1];
-        document.querySelector("div.previewInputFull").innerHTML = numbersArray;
     } else if (document.querySelector('input#min-number').value != '' && document.querySelector('input#max-number').value != '' && document.querySelector('input#number').value == '') {
         for (let i = min; i <= max; i++) {
             numbersArray.push(i);
-            document.querySelector("div.previewInputFull").innerHTML = numbersArray;
+            document.querySelector("div.output").innerHTML = numbersArray;
         }
     } else {
         document.querySelector("div.output").innerHTML = "Error";
@@ -40,7 +40,6 @@ function arrRandomizer(array) {
     }
     document.querySelector("div.output").innerHTML = newArr;
     document.querySelector("div.previewInputCurrent").innerHTML = 'Placeholder';
-    document.querySelector("div.previewInputFull").innerHTML = 'Placeholder';
 }
 
 // Old functions
