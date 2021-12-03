@@ -30,6 +30,19 @@ function push(n, min, max) {
     }
 }
 
+function arrRandomizer(array) {
+    var newArr = [];
+    while(array.length) {
+        var random = Math.floor(Math.random() * array.length);
+        var splicedArr = array.splice(random, 1);
+        var splicedNum = splicedArr[0];
+        newArr.push(splicedNum);
+    }
+    document.querySelector("div.output").innerHTML = newArr;
+    document.querySelector("div.previewInputCurrent").innerHTML = 'Placeholder';
+    document.querySelector("div.previewInputFull").innerHTML = 'Placeholder';
+}
+
 // Old functions
 
 // function pushRange(min, max) {
@@ -44,16 +57,3 @@ function push(n, min, max) {
 //     document.querySelector("div.previewInputCurrent").innerHTML = numbersArray[numbersArray.length - 1];
 //     document.querySelector("div.previewInputFull").innerHTML = numbersArray;
 // }
-
-function arrRandomizer(array) {
-    var newArr = [];
-    while(array.length) {
-        var random = Math.floor(Math.random() * array.length);
-        var splicedArr = array.splice(random, 1);
-        var splicedNum = splicedArr[0];
-        newArr.push(splicedNum);
-    }
-    document.querySelector("div.output").innerHTML = newArr;
-    document.querySelector("div.previewInputCurrent").innerHTML = 'Placeholder';
-    document.querySelector("div.previewInputFull").innerHTML = 'Placeholder';
-}
