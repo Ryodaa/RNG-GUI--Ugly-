@@ -30,11 +30,6 @@
     width: 230px;
     margin-bottom: 10px;
   }
-  #numberShuf {
-    margin-left: auto;
-    margin-right: auto;
-    width: 55%;
-  }
   .output {
     display: inline-table;
     font-size: 50px;
