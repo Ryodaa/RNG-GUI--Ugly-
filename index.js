@@ -38,7 +38,8 @@ function arrRandomizer(array) {
         var splicedNum = splicedArr[0];
         newArr.push(splicedNum);
     }
-    document.querySelector("div.output").innerHTML = newArr;
+    numbersArray = newArr;
+    document.querySelector("div.output").innerHTML = numbersArray;
     document.querySelector("div.previewInputCurrent").innerHTML = 'Placeholder';
 }
 
