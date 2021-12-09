@@ -6,7 +6,6 @@ let checkboxInput = document.getElementsByClassName('form-check-input');
 let textInputMinMax = document.getElementsByClassName('minMax');
 let textInputSingle = document.getElementById('number');
 let confirmBtn = document.querySelector("button.confirm");
-let resetDiv = document.get
 let numbersArray = [];
 
 function spinToWin(n) {
@@ -53,12 +52,15 @@ function arrRandomizer(array) {
 
 function resetArray() {
     numbersArray = [];
-    output.innerHTML = '';
     confirmBtn.disabled = false;
 }
 
-function resetText() {
+function resetInputs() {
     baseNum.value = '';
     maxNum.value = '';
     minNum.value = '';
+}
+
+function setResult() {
+    document.getElementById('resultString').innerHTML = "Result";
 }
