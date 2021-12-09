@@ -50,11 +50,11 @@
                   placeholder="Single Numbers and Strings"
                 />
               <div class="shuffleButtons">
-                <button onclick="push(document.querySelector('input#number').value, document.querySelector('input#min-number').value, document.querySelector('input#max-number').value)" class="shfl-btn btn btn-lg btn-success">Confirm</button>
+                <button onclick="push(baseNum.value, minNum.value, maxNum.value); resetText();" class="shfl-btn btn btn-lg btn-success confirm">Confirm</button>
                 <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success">Shuffle</button>
               </div>
               <div>
-              <button onclick="" class="shfl-btn btn btn-lg btn-success" disabled>Reset</button>
+              <button onclick="resetText(); resetArray()" class="shfl-btn btn btn-lg btn-success">Reset</button>
             </div class="resetBtn">
               <div class="output">
                 <div style="color: rgba(255, 255, 255, 0.089);">Result</div>
