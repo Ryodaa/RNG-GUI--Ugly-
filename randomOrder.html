@@ -31,13 +31,13 @@
                 <div class="rangeNum">Number Range
                   <input
                   type="text"
-                  class="form-control"
+                  class="form-control minMax"
                   id="min-number"
                   placeholder="min"
                 />
                 <input
                 type="text"
-                class="form-control"
+                class="form-control minMax"
                 id="max-number"
                 placeholder="max"
               />
@@ -54,10 +54,10 @@
                 <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success">Shuffle</button>
               </div>
               <div>
-              <button onclick="resetText(); resetArray(); output.innerHTML = 'Result';" class="shfl-btn btn btn-lg btn-success">Reset</button>
+              <button onclick="resetText(); resetArray();" class="shfl-btn btn btn-lg btn-success">Reset</button>
             </div class="resetBtn">
               <div class="output">
-                <div style="color: rgba(255, 255, 255, 0.089);">Result</div>
+                <div style='color: rgba(255, 255, 255, 0.089);'>Result</div>
               </div>
             </div>
           </div>
@@ -91,6 +91,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script>
+        setInterval(function(){
+          if(baseNum.value != '') {
+            confirmBtn.disabled = false; textInputMinMax[0].disabled = true; textInputMinMax[1].disabled = true;
+          } else if (minNum.value != '' || maxNum.value != '') {
+            confirmBtn.disabled = false; textInputSingle.disabled = true;
+          } else {
+            confirmBtn.disabled = true; textInputMinMax[0].disabled = false; textInputMinMax[1].disabled = false; textInputSingle.disabled = false;
+          }
+            }, 50)
+    </script>
 
   </body>
 </html>

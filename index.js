@@ -3,7 +3,10 @@ let baseNum = document.querySelector('input#number');
 let minNum = document.querySelector('input#min-number');
 let maxNum = document.querySelector('input#max-number');
 let checkboxInput = document.getElementsByClassName('form-check-input');
+let textInputMinMax = document.getElementsByClassName('minMax');
+let textInputSingle = document.getElementById('number');
 let confirmBtn = document.querySelector("button.confirm");
+let resetDiv = document.get
 let numbersArray = [];
 
 function spinToWin(n) {
@@ -59,7 +62,3 @@ function resetText() {
     maxNum.value = '';
     minNum.value = '';
 }
-
-setInterval(function(){
-    if(baseNum.value != '') {confirmBtn.disabled = false;}
-        }, 100)
