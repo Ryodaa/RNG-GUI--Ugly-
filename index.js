@@ -1,13 +1,18 @@
+let output = document.querySelector("div.output");
+let preview = document.querySelector("div.previewInputCurrent");
+
 function spinToWin(n) {
-    if (n <= -1 || n >= 10000000) {
-      document.querySelector("div.output").innerHTML = "Error";
+    let checkboxInput = document.getElementsByClassName("form-check-input");
+
+    if (n <= -1 || n >= 1e7) {
+      output.innerHTML = "Error";
     } else {
-        if(document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == true) {
-            var num = Math.floor(Math.random() * (n - 0 + 1));
-            document.querySelector("div.output").innerHTML = num;
-        } else if (document.getElementsByClassName("form-check-input").inlineCheckbox1.checked == false) {
-            var num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
-            document.querySelector("div.output").innerHTML = num;
+        if(checkboxInput.inlineCheckbox1.checked == true) {
+            let num = Math.floor(Math.random() * (n - 0 + 1));
+            output.innerHTML = num;
+        } else if (checkboxInput.inlineCheckbox1.checked == false) {
+            let num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
+            output.innerHTML = num;
         }
     }
   }
@@ -15,18 +20,22 @@ function spinToWin(n) {
 var numbersArray = [];
 
 function push(n, min, max) {
-    if (document.querySelector('input#number').value != '' && document.querySelector('input#min-number').value == '' && document.querySelector('input#max-number').value == '') {
+    let baseNum = document.querySelector('input#number');
+    let minNum = document.querySelector('input#min-number');
+    let maxNum = document.querySelector('input#max-number');
+
+    if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
         numbersArray.push(n);
-        document.querySelector("input#number").value = '';
-        document.querySelector("div.output").innerHTML = numbersArray;
-        document.querySelector("div.previewInputCurrent").innerHTML = numbersArray[numbersArray.length - 1];
-    } else if (document.querySelector('input#min-number').value != '' && document.querySelector('input#max-number').value != '' && document.querySelector('input#number').value == '') {
+        baseNum.value = '';
+        output.innerHTML = numbersArray;
+        preview.innerHTML = numbersArray[numbersArray.length - 1];
+    } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
         for (let i = min; i <= max; i++) {
             numbersArray.push(i);
-            document.querySelector("div.output").innerHTML = numbersArray;
+            output.innerHTML = numbersArray;
         }
     } else {
-        document.querySelector("div.output").innerHTML = "Error";
+        output.innerHTML = "Error";
     }
 }
 
@@ -39,8 +48,8 @@ function arrRandomizer(array) {
         newArr.push(splicedNum);
     }
     numbersArray = newArr;
-    document.querySelector("div.output").innerHTML = numbersArray;
-    document.querySelector("div.previewInputCurrent").innerHTML = 'Placeholder';
+    output.innerHTML = numbersArray;
+    preview.innerHTML = 'Placeholder';
 }
 
 // Old functions
