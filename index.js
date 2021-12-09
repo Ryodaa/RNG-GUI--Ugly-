@@ -26,10 +26,12 @@ function push(n, min, max) {
   if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
     numbersArray.push(n);
     output.innerHTML = numbersArray;
+    output.style.color = "white";
   } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
     for (let i = min; i <= max; i++) {
       numbersArray.push(i);
     }
+    output.style.color = "white";
     output.innerHTML = numbersArray;
     confirmBtn.disabled = true;
 
@@ -41,9 +43,9 @@ function push(n, min, max) {
 function arrRandomizer(array) {
   var newArr = [];
   while (array.length) {
-    var random = Math.floor(Math.random() * array.length);
-    var splicedArr = array.splice(random, 1);
-    var splicedNum = splicedArr[0];
+    let random = Math.floor(Math.random() * array.length);
+    let splicedArr = array.splice(random, 1);
+    let splicedNum = splicedArr[0];
     newArr.push(splicedNum);
   }
   numbersArray = newArr;
@@ -51,16 +53,17 @@ function arrRandomizer(array) {
 }
 
 function resetArray() {
-    numbersArray = [];
-    confirmBtn.disabled = false;
+  numbersArray = [];
+  confirmBtn.disabled = false;
 }
 
 function resetInputs() {
-    baseNum.value = '';
-    maxNum.value = '';
-    minNum.value = '';
+  baseNum.value = '';
+  maxNum.value = '';
+  minNum.value = '';
 }
 
-function setResult() {
-    document.getElementById('resultString').innerHTML = "Result";
+function resetResult() {
+  output.innerHTML = "Result"
+  output.style.color = "rgba(255, 255, 255, 0.089)";
 }

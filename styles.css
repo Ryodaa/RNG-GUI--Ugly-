@@ -1,78 +1,93 @@
 .body {
-    background-color: #8db692;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-  }
-  .external {
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-  }
-  .middle {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .internal {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
-  }
-  .btn-custom {
-    height: 65px;
-    width: 255px;
-  }
-  #number {
-    margin-left: auto;
-    margin-right: auto;
-    width: 255px;
-    margin-bottom: 10px;
-  }
-  .output {
-    display: inline-table;
-    font-size: 50px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 24px;
-    width: 255px;
-    color: rgb(255, 255, 255);
-    border: 5px dotted rgb(255, 255, 255);
-  }
-  .titleNG {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 80px;
-  }
-  .titleShuf {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  .checkboxBottom {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #ffffff;
-  }
-  .rangeNum {
-    padding-top: 10px;
-    width: 103px;
-    display: inline-table;
-    text-align: center;
-    color: white;
-    font-size: small;
-  }
-  .shuffleButtons {
-    margin: 20px 0 0px 0;
-  }
-  .shfl-btn {
-    width: 130px;
-    margin-top: 5px;
-  }
-  .or {
-    padding: 8px 0 8px 0;
-    color: white;
-    font-size: small;
-  } 
+  background-color: #8db692;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.external {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.internal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+}
+
+.btn-custom {
+  height: 65px;
+  width: 255px;
+}
+
+#number {
+  margin-left: auto;
+  margin-right: auto;
+  width: 255px;
+  margin-bottom: 10px;
+}
+
+.output {
+  display: inline-block;
+  flex-wrap: wrap;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 24px;
+  max-width: 255px;
+  width: 255px;
+  color: rgba(255, 255, 255, 0.089);
+  border: 5px dotted rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.titleNG {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
+.titleShuf {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.checkboxBottom {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.rangeNum {
+  padding-top: 10px;
+  width: 103px;
+  display: inline-table;
+  text-align: center;
+  color: white;
+  font-size: small;
+}
+
+.shuffleButtons {
+  margin: 20px 0 0px 0;
+}
+
+.shfl-btn {
+  width: 130px;
+  margin-top: 5px;
+}
+
+.or {
+  padding: 8px 0 8px 0;
+  color: white;
+  font-size: small;
+}
