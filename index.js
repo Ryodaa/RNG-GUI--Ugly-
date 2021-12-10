@@ -24,18 +24,25 @@ function spinToWin(n) {
 }
 
 function push(n, min, max) {
-  if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
-    numbersArray.push(" " + n);
-    outputShuf.value = numbersArray;
-  } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
-    for (let i = min; i <= max; i++) {
-      numbersArray.push(" " + i);
-    }
-    outputShuf.value = numbersArray;
-    confirmBtn.disabled = true;
+  if (max > 250000) {
+    outputShuf.value = "Error: Number can't be higher than 250.000";
+  } else if (min < -250000) {
+    outputShuf.value = "Error: Number can't be lower than -250.000";
   } else {
-    outputShuf.value = 'Error';
+    if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
+      numbersArray.push(" " + n);
+      outputShuf.value = numbersArray;
+    } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
+      for (let i = min; i <= max; i++) {
+        numbersArray.push(" " + i);
+      }
+      outputShuf.value = numbersArray;
+      confirmBtn.disabled = true;
+    } else {
+      outputShuf.value = 'Error';
+    }
   }
+
 }
 
 function arrRandomizer(array) {
