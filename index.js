@@ -25,11 +25,11 @@ function spinToWin(n) {
 
 function push(n, min, max) {
   if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
-    numbersArray.push(n);
+    numbersArray.push(" " + n);
     outputShuf.value = numbersArray;
   } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
     for (let i = min; i <= max; i++) {
-      numbersArray.push(i);
+      numbersArray.push(" " + i);
     }
     outputShuf.value = numbersArray;
     confirmBtn.disabled = true;
