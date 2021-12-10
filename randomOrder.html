@@ -24,7 +24,7 @@
     <div class="middle">
       <div class="text-center internal">
         <div class="content">
-          <h1 class="titleShuf">Shuffler (WIP)</h1>
+          <h1 class="titleShuf">Shuffler</h1>
           <div class="rangeNum">Number Range
             <input type="text" class="form-control minMax" id="min-number" placeholder="min" />
             <input type="text" class="form-control minMax" id="max-number" placeholder="max" />
@@ -37,10 +37,10 @@
             <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success">Shuffle</button>
           </div>
           <div>
-            <button onclick="resetInputs(); resetArray(); resetResult();"
+            <button onclick="resetInputs(); resetArray(); clearOutput();"
               class="shfl-btn btn btn-lg btn-success">Reset</button>
           </div class="resetBtn">
-          <div class="output">Result</div>
+          <textarea class="output" name="outputWindow" rows="4" cols="50" placeholder="Result"></textarea>
         </div>
       </div>
     </div>

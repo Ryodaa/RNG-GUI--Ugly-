@@ -1,11 +1,11 @@
-let output = document.querySelector('div.output');
+let output = document.getElementsByClassName("output").outputWindow;
 let baseNum = document.querySelector('input#number');
 let minNum = document.querySelector('input#min-number');
 let maxNum = document.querySelector('input#max-number');
 let checkboxInput = document.getElementsByClassName('form-check-input');
 let textInputMinMax = document.getElementsByClassName('minMax');
 let textInputSingle = document.getElementById('number');
-let confirmBtn = document.querySelector("button.confirm");
+let confirmBtn = document.querySelector('button.confirm');
 let numbersArray = [];
 
 function spinToWin(n) {
@@ -25,18 +25,15 @@ function spinToWin(n) {
 function push(n, min, max) {
   if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
     numbersArray.push(n);
-    output.innerHTML = numbersArray;
-    output.style.color = "white";
+    output.value = numbersArray;
   } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
     for (let i = min; i <= max; i++) {
       numbersArray.push(i);
     }
-    output.style.color = "white";
-    output.innerHTML = numbersArray;
+    output.value = numbersArray;
     confirmBtn.disabled = true;
-
   } else {
-    output.innerHTML = 'Error';
+    output.value = 'Error';
   }
 }
 
@@ -49,7 +46,7 @@ function arrRandomizer(array) {
     newArr.push(splicedNum);
   }
   numbersArray = newArr;
-  output.innerHTML = numbersArray;
+  output.value = numbersArray;
 }
 
 function resetArray() {
@@ -57,13 +54,13 @@ function resetArray() {
   confirmBtn.disabled = false;
 }
 
-function resetInputs() {
-  baseNum.value = '';
-  maxNum.value = '';
-  minNum.value = '';
+function resetInputs()
+{
+    baseNum.value = '';
+    maxNum.value = '';
+    minNum.value = '';
 }
-
-function resetResult() {
-  output.innerHTML = "Result"
-  output.style.color = "rgba(255, 255, 255, 0.089)";
+function clearOutput()
+{
+    output.value = '';
 }
