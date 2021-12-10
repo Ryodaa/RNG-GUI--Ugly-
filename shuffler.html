@@ -32,12 +32,12 @@
           <div class="or">or</div>
           <input type="text" class="form-control" id="number" placeholder="Single Numbers and Strings" />
           <div class="shuffleButtons">
-            <button onclick="push(baseNum.value, minNum.value, maxNum.value); resetInputs();"
+            <button onclick="push(baseNum.value, minNum.value, maxNum.value); reset();"
               class="shfl-btn btn btn-lg btn-success confirm">Confirm</button>
             <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success">Shuffle</button>
           </div>
           <div>
-            <button onclick="resetInputs(); resetArray(); clearOutput();"
+            <button onclick="resetArray(); reset(1);"
               class="shfl-btn btn btn-lg btn-success">Reset</button>
           </div class="resetBtn">
           <textarea class="output" name="outputWindow" rows="4" cols="50" placeholder="Result"></textarea>
