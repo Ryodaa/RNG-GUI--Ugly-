@@ -54,13 +54,12 @@ function resetArray() {
   confirmBtn.disabled = false;
 }
 
-function resetInputs()
-{
-    baseNum.value = '';
-    maxNum.value = '';
-    minNum.value = '';
+function resetInputs() {
+  baseNum.value = '';
+  maxNum.value = '';
+  minNum.value = '';
 }
-function clearOutput()
-{
-    output.value = '';
+
+function clearOutput() {
+  output.value = '';
 }
