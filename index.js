@@ -54,12 +54,11 @@ function resetArray() {
   confirmBtn.disabled = false;
 }
 
-function reset() {
+function reset(n) {
   baseNum.value = '';
   maxNum.value = '';
   minNum.value = '';
-  if(n === 1)
-  {
+  if (n === 1) {
     output.value = '';
   }
 }
