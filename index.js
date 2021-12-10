@@ -1,4 +1,5 @@
-let output = document.getElementsByClassName("output").outputWindow;
+let outputShuf = document.getElementsByClassName("outputShuf").outputWindow;
+let output = document.querySelector("div.output");
 let baseNum = document.querySelector('input#number');
 let minNum = document.querySelector('input#min-number');
 let maxNum = document.querySelector('input#max-number');
@@ -25,15 +26,15 @@ function spinToWin(n) {
 function push(n, min, max) {
   if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
     numbersArray.push(n);
-    output.value = numbersArray;
+    outputShuf.value = numbersArray;
   } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
     for (let i = min; i <= max; i++) {
       numbersArray.push(i);
     }
-    output.value = numbersArray;
+    outputShuf.value = numbersArray;
     confirmBtn.disabled = true;
   } else {
-    output.value = 'Error';
+    outputShuf.value = 'Error';
   }
 }
 
@@ -46,7 +47,7 @@ function arrRandomizer(array) {
     newArr.push(splicedNum);
   }
   numbersArray = newArr;
-  output.value = numbersArray;
+  outputShuf.value = numbersArray;
 }
 
 function resetArray() {
@@ -59,6 +60,6 @@ function reset(n) {
   maxNum.value = '';
   minNum.value = '';
   if (n === 1) {
-    output.value = '';
+    outputShuf.value = '';
   }
 }
