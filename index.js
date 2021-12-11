@@ -13,10 +13,10 @@ function spinToWin(n) {
   if (n <= -1 || n >= 1e7) {
     output.innerHTML = 'Error';
   } else {
-    if (checkboxInput.inlineCheckbox1.checked == true) {
+    if (checkboxInput.inlineCheckbox1.checked) {
       let num = Math.floor(Math.random() * (n - 0 + 1));
       output.innerHTML = num;
-    } else if (checkboxInput.inlineCheckbox1.checked == false) {
+    } else if (!checkboxInput.inlineCheckbox1.checked) {
       let num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
       output.innerHTML = num;
     }
@@ -30,11 +30,20 @@ function push(n, min, max) {
     outputShuf.value = "Error: Number can't be lower than -250.000";
   } else {
     if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
-      numbersArray.push(" " + n);
-      outputShuf.value = numbersArray;
+      if (!numbersArray.length) {
+        numbersArray.push(n);
+        outputShuf.value = numbersArray;
+      } else {
+        numbersArray.push(" " + n);
+        outputShuf.value = numbersArray;
+      }
     } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
       for (let i = min; i <= max; i++) {
-        numbersArray.push(" " + i);
+        if (!numbersArray.length) {
+          numbersArray.push(i);
+        } else {
+          numbersArray.push(" " + i);
+        }
       }
       outputShuf.value = numbersArray;
       confirmBtn.disabled = true;
@@ -42,11 +51,11 @@ function push(n, min, max) {
       outputShuf.value = 'Error';
     }
   }
-
 }
 
 function arrRandomizer(array) {
   let newArr = [];
+
   while (array.length) {
     let random = Math.floor(Math.random() * array.length);
     let splicedArr = array.splice(random, 1);
@@ -70,3 +79,7 @@ function reset(n) {
     outputShuf.value = '';
   }
 }
+
+// conditional shorthand testing, please ignore
+
+// numbersArray.length === 0 ?
