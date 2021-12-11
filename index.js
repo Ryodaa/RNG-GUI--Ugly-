@@ -53,12 +53,12 @@ function push(n, min, max) {
   }
 }
 
-function arrRandomizer(array) {
+function arrRandomizer(arr) {
   let newArr = [];
 
-  while (array.length) {
-    let random = Math.floor(Math.random() * array.length);
-    let splicedArr = array.splice(random, 1);
+  while (arr.length) {
+    let random = Math.floor(Math.random() * arr.length);
+    let splicedArr = arr.splice(random, 1);
     let splicedNum = splicedArr[0];
     newArr.push(splicedNum);
   }
@@ -79,7 +79,3 @@ function reset(n) {
     outputShuf.value = '';
   }
 }
-
-// conditional shorthand testing, please ignore
-
-// numbersArray.length === 0 ?
