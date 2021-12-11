@@ -7,7 +7,7 @@ let checkboxInput = document.getElementsByClassName('form-check-input');
 let textInputMinMax = document.getElementsByClassName('minMax');
 let textInputSingle = document.getElementById('number');
 let confirmBtn = document.querySelector('button.confirm');
-let numbersArray = [];
+let numbersArray = []; //The array from the comment in line 65
 
 function spinToWin(n) {
   if (n <= -1 || n >= 1e7) {
@@ -62,7 +62,7 @@ function arrRandomizer(arr) {
     let splicedNum = splicedArr[0];
     newArr.push(splicedNum);
   }
-  numbersArray = newArr;
+  numbersArray = newArr; //numbersArray needs to be created outside of the function unless you make this function return an array.
   outputShuf.value = numbersArray;
 }
 
