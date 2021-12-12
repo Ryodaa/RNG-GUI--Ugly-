@@ -1,5 +1,5 @@
 let outputShuf = document.getElementsByClassName("outputShuf").outputWindow;
-let output = document.querySelector("div.output");
+let output = document.querySelector(".output");
 let baseNum = document.querySelector('input#number');
 let minNum = document.querySelector('input#min-number');
 let maxNum = document.querySelector('input#max-number');
