@@ -52,17 +52,17 @@
 .titleNG {
   color: white;
   font-size: 30px;
-  margin-bottom: 70px;
+  margin: 0 0 70px 0;
 }
 
 .titleShuf {
   color: white;
   font-size: 35px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .checkboxBottom {
-  margin-top: 8px;
+  margin: 8px 0 0 0;
   font-size: 14px;
   color: #ffffff;
 }
@@ -77,12 +77,12 @@
 }
 
 .shuffleButtons {
-  margin: 20px 0 0px 0;
+  margin: 20px 0 0 0;
 }
 
 .shfl-btn {
   width: 130px;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
 
 .or {
