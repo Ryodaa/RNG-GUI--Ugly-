@@ -30,21 +30,14 @@ function push(n, min, max) {
     outputShuf.value = "Error: Number can't be lower than -250.000";
   } else {
     if (baseNum.value != '' && minNum.value == '' && maxNum.value == '') {
-      if (!numbersArray.length) {
-        numbersArray.push(n);
-        outputShuf.value = numbersArray;
-      } else {
-        numbersArray.push(" " + n);
-        outputShuf.value = numbersArray;
-      }
+      numbersArray.push(" " + n);
+      numbersArray[0] = numbersArray[0].trim();
+      outputShuf.value = numbersArray;
     } else if (minNum.value != '' && maxNum.value != '' && baseNum.value == '') {
       for (let i = min; i <= max; i++) {
-        if (!numbersArray.length) {
-          numbersArray.push(i);
-        } else {
-          numbersArray.push(" " + i);
-        }
+        numbersArray.push(" " + i);
       }
+      numbersArray[0] = numbersArray[0].trim();
       outputShuf.value = numbersArray;
       confirmBtn.disabled = true;
     } else {
@@ -55,7 +48,7 @@ function push(n, min, max) {
 
 function arrRandomizer(arr) {
   let newArr = [];
-  
+  numbersArray[0] = " " + numbersArray[0];
   while (arr.length) {
     let random = Math.floor(Math.random() * arr.length);
     let splicedArr = arr.splice(random, 1);
@@ -63,6 +56,7 @@ function arrRandomizer(arr) {
     newArr.push(splicedNum);
   }
   numbersArray = newArr; //numbersArray needs to be created outside of the function unless you make this function return an array.
+  numbersArray[0] = numbersArray[0].trim();
   outputShuf.value = numbersArray;
 }
 
