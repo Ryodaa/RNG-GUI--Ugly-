@@ -16,10 +16,10 @@ function spinToWin(n) {
     output.innerHTML = 'Error';
   } else {
     if (checkboxInput.inlineCheckbox1.checked) {
-      let num = Math.floor(Math.random() * (n - 0 + 1));
+      let num = Math.floor(Math.random() * (parseInt(n) + 1));
       output.innerHTML = num;
     } else {
-      let num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
+      let num = Math.floor(Math.random() * n) + 1;
       output.innerHTML = num;
     }
   }
