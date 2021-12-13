@@ -1,5 +1,7 @@
 let outputShuf = document.getElementsByClassName("outputShuf").outputWindow;
 let output = document.querySelector(".output");
+let spinBtn = document.querySelector(".spinBtn");
+let spinInput = document.querySelector(".spinInput");
 let shuffleButton = document.querySelector(".shuffle");
 let resetButton = document.querySelector(".resetbtn");
 let baseNum = document.querySelector('#number');
