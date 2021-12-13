@@ -92,11 +92,9 @@ function inputDisable() {
     textInputMinMax[1].disabled = false;
     textInputSingle.disabled = false;
   }
-  if (outputShuf.value != '') {
-    shuffleButton.disabled = false;
-  } else {
-    shuffleButton.disabled = true;
-  }
+
+  outputShuf.value != '' ? shuffleButton.disabled = false : shuffleButton.disabled = true;
+  
   if (baseNum.value != '' || maxNum.value != '' || minNum.value != '' || outputShuf.value != '') {
     resetButton.disabled = false;
   } else {
