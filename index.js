@@ -18,7 +18,7 @@ function spinToWin(n) {
     if (checkboxInput.inlineCheckbox1.checked) {
       let num = Math.floor(Math.random() * (n - 0 + 1));
       output.innerHTML = num;
-    } else if (!checkboxInput.inlineCheckbox1.checked) {
+    } else {
       let num = Math.floor(Math.random() * (n - 1 + 1)) + 1;
       output.innerHTML = num;
     }
@@ -94,7 +94,7 @@ function inputDisable() {
   }
 
   outputShuf.value != '' ? shuffleButton.disabled = false : shuffleButton.disabled = true;
-  
+
   if (baseNum.value != '' || maxNum.value != '' || minNum.value != '' || outputShuf.value != '') {
     resetButton.disabled = false;
   } else {
