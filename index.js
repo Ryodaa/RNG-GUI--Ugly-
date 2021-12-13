@@ -79,3 +79,22 @@ function reset(n) {
     outputShuf.value = '';
   }
 }
+
+function inputDisable() {
+  if (baseNum.value != '') {
+    confirmBtn.disabled = false;
+    textInputMinMax[0].disabled = true;
+    textInputMinMax[1].disabled = true;
+  } else if (minNum.value != '' && maxNum.value != '') {
+    confirmBtn.disabled = false;
+    textInputSingle.disabled = true;
+  } else if (minNum.value != '' || maxNum.value != '') {
+    confirmBtn.disabled = true;
+    textInputSingle.disabled = true;
+  } else {
+    confirmBtn.disabled = true;
+    textInputMinMax[0].disabled = false;
+    textInputMinMax[1].disabled = false;
+    textInputSingle.disabled = false;
+  }
+}
