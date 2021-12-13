@@ -55,7 +55,7 @@ function push(n, min, max) {
 
 function arrRandomizer(arr) {
   let newArr = [];
-
+  
   while (arr.length) {
     let random = Math.floor(Math.random() * arr.length);
     let splicedArr = arr.splice(random, 1);
