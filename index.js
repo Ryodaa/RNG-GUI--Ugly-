@@ -1,5 +1,7 @@
 let outputShuf = document.getElementsByClassName("outputShuf").outputWindow;
 let output = document.querySelector(".output");
+let shuffleButton = document.querySelector(".shuffle");
+let resetButton = document.querySelector(".resetbtn");
 let baseNum = document.querySelector('input#number');
 let minNum = document.querySelector('input#min-number');
 let maxNum = document.querySelector('input#max-number');
@@ -75,6 +77,8 @@ function reset(n) {
 }
 
 function inputDisable() {
+  //Can shorten this first block by setting input to disabled by default.
+  //Do that later!
   if (baseNum.value != '') {
     confirmBtn.disabled = false;
     textInputMinMax[0].disabled = true;
@@ -90,5 +94,16 @@ function inputDisable() {
     textInputMinMax[0].disabled = false;
     textInputMinMax[1].disabled = false;
     textInputSingle.disabled = false;
+  }
+//This block is fine for now
+  if (outputShuf.value != '') {
+    shuffleButton.disabled = false;
+  } else {
+    shuffleButton.disabled = true;
+  }
+  if (baseNum.value != '' || maxNum.value != '' || minNum.value != '' || outputShuf.value != '') {
+    resetButton.disabled = false;
+  } else {
+    resetButton.disabled = true;
   }
 }

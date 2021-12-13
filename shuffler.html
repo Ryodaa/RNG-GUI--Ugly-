@@ -34,10 +34,10 @@
           <div class="shuffleButtons">
             <button onclick="push(baseNum.value, minNum.value, maxNum.value); reset();"
               class="shfl-btn btn btn-lg btn-success confirm">Confirm</button>
-            <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success">Shuffle</button>
+            <button onclick="arrRandomizer(numbersArray)" class="shfl-btn btn btn-lg btn-success shuffle" disabled>Shuffle</button>
           </div>
           <div>
-            <button onclick="resetArray(); reset(1);" class="shfl-btn btn btn-lg btn-success">Reset</button>
+            <button onclick="resetArray(); reset(1);" class="shfl-btn btn btn-lg btn-success resetbtn" disabled>Reset</button>
           </div class="resetBtn">
           <textarea class="outputShuf" name="outputWindow" rows="4" cols="50" placeholder="Result"></textarea>
         </div>
@@ -76,17 +76,24 @@
   </script>
   <script src="index.js"></script>
   <script>
-
     setInterval(function () {
       inputDisable();
     }, 13)
 
-    document.querySelector("#number").addEventListener("keyup", function (event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-        document.querySelector(".confirm").click();
-      }
-    })
+    switch (minNum.value == '' && maxNum.value == '') {
+      case true:
+        document.querySelector("#number").addEventListener("keyup", function (event) {
+          event.preventDefault();
+          if (event.keyCode === 13) {
+            document.querySelector(".confirm").click();
+          }
+        })
+
+        break;
+      case false:
+        console.log("false");
+        break;
+    }
   </script>
 
 </body>
