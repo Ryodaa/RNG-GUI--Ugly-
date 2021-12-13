@@ -77,8 +77,6 @@ function reset(n) {
 }
 
 function inputDisable() {
-  //Can shorten this first block by setting input to disabled by default.
-  //Do that later!
   if (baseNum.value != '') {
     confirmBtn.disabled = false;
     textInputMinMax[0].disabled = true;
@@ -87,7 +85,6 @@ function inputDisable() {
     confirmBtn.disabled = false;
     textInputSingle.disabled = true;
   } else if (minNum.value != '' || maxNum.value != '') {
-    confirmBtn.disabled = true;
     textInputSingle.disabled = true;
   } else {
     confirmBtn.disabled = true;
@@ -95,7 +92,6 @@ function inputDisable() {
     textInputMinMax[1].disabled = false;
     textInputSingle.disabled = false;
   }
-//This block is fine for now
   if (outputShuf.value != '') {
     shuffleButton.disabled = false;
   } else {
