@@ -2,13 +2,13 @@ let outputShuf = document.getElementsByClassName("outputShuf").outputWindow;
 let output = document.querySelector(".output");
 let shuffleButton = document.querySelector(".shuffle");
 let resetButton = document.querySelector(".resetbtn");
-let baseNum = document.querySelector('input#number');
-let minNum = document.querySelector('input#min-number');
-let maxNum = document.querySelector('input#max-number');
+let baseNum = document.querySelector('#number');
+let minNum = document.querySelector('#min-number');
+let maxNum = document.querySelector('#max-number');
 let checkboxInput = document.getElementsByClassName('form-check-input');
 let textInputMinMax = document.getElementsByClassName('minMax');
 let textInputSingle = document.getElementById('number');
-let confirmBtn = document.querySelector('button.confirm');
+let confirmBtn = document.querySelector('.confirm');
 let numbersArray = []; //The array from the comment in line 65
 
 function spinToWin(n) {
