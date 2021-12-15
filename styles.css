@@ -94,3 +94,16 @@
   color: white;
   font-size: small;
 }
+
+.content {
+  display: inline-flex;
+  max-width: 255;
+}
+
+.accordionItem {
+  background-color:  rgba(52, 155, 98, 0.747);
+}
+
+.accordionInside {
+  background-color:  #8db692;
+}
